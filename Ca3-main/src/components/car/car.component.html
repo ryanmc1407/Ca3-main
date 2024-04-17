@@ -1,0 +1,16 @@
+<div class="container" style="background-color: lightcoral">
+    <div class="row border-bottom mb-2 car-details">
+        <div class="col-2">{{carData?.make}}</div>
+        <div class="col-2">{{carData?.model}}</div>
+        <div class="col-2">{{carData?.year}}</div>
+        <div class="col-4 car-image">
+            <img src="{{carData?.imageURL}}" [style.width.px]="carImageWidth" />
+        </div>
+        <div class="col-2">
+            <button *ngIf="carData" class="btn btn-danger btn-sm mr-2" (click)="carData && deleteCar(carData._id)">
+                Delete
+            </button>
+        </div>
+    </div>
+</div>
+
